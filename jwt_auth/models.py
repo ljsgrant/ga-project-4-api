@@ -13,4 +13,4 @@ class User(AbstractUser):
     # photos = models.ManyToManyField('photos.Photo', related_name='photo_owner')
 
     def __str__(self):
-        return f"{self.user}"
+        return f"{self.username}"
