@@ -4,7 +4,7 @@
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$390000$hXm6JHmFaTTlNnsUI6dDqL$p+il0bhFYhJRie6ZFNBF/aiQpQK/s4TsTcCy2W+byBQ=",
-    "last_login": null,
+    "last_login": "2023-01-18T16:01:46.925Z",
     "is_superuser": true,
     "username": "admin",
     "is_staff": true,
@@ -13,6 +13,25 @@
     "email": "admin@admin.com",
     "first_name": "",
     "last_name": "",
+    "profile_picture": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$Pkq4rxtZwkqSZeQm4SSjtm$EJvFlCLrVJ+ALp3cu6DE87x90eNQKxib4Pnco3/opC8=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "user",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-01-18T16:01:34.512Z",
+    "email": "user@user.com",
+    "first_name": "user",
+    "last_name": "user",
     "profile_picture": "",
     "groups": [],
     "user_permissions": []

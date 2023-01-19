@@ -1,0 +1,22 @@
+[
+{
+  "model": "birds.bird",
+  "pk": 1,
+  "fields": {
+    "name": "Common Kingfisher",
+    "scientific_name": "Alcedo atthis",
+    "description": "The common kingfisher (Alcedo atthis), also known as the Eurasian kingfisher and river kingfisher, is a small kingfisher with seven subspecies recognized within its wide distribution across Eurasia and North Africa. It is resident in much of its range, but migrates from areas where rivers freeze in winter.  This sparrow-sized bird has the typical short-tailed, large-headed kingfisher profile; it has blue upperparts, orange underparts and a long bill.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/92/%E2%99%82_Common_Kingfisher_%28Alcedo_atthis%29_Photograph_By_Shantanu_Kuveskar%2C_Mangaon%2C_Maharashtra%2C_India.jpg"
+  }
+},
+{
+  "model": "birds.bird",
+  "pk": 2,
+  "fields": {
+    "name": "Little grebe",
+    "scientific_name": "Tachybaptus ruficollis",
+    "description": "The little grebe (Tachybaptus ruficollis), also known as dabchick, is a member of the grebe family of water birds. The genus name is from Ancient Greek takhus \"fast\" and bapto \"to sink under\".",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Little_grebe_Zwergtaucher.jpg"
+  }
+}
+]

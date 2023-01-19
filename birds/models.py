@@ -8,4 +8,4 @@ class Bird(models.Model):
     image = models.CharField(max_length=500)
 
     def __str__(self):
-        return f"{self.owner}"
+        return f"{self.name}"
