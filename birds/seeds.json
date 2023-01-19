@@ -18,5 +18,15 @@
     "description": "The little grebe (Tachybaptus ruficollis), also known as dabchick, is a member of the grebe family of water birds. The genus name is from Ancient Greek takhus \"fast\" and bapto \"to sink under\".",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Little_grebe_Zwergtaucher.jpg"
   }
+},
+{
+  "model": "birds.bird",
+  "pk": 3,
+  "fields": {
+    "name": "Canada goose",
+    "scientific_name": "Branta canadensis",
+    "description": "The Canada goose (sometimes called Canadian goose) is a large wild goose with a black head and neck, white cheeks, white under its chin, and a brown body. It is native to the arctic and temperate regions of North America, and it is occasionally found during migration across the Atlantic in northern Europe.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Canada_goose_on_Seedskadee_NWR_%2827826185489%29.jpg/788px-Canada_goose_on_Seedskadee_NWR_%2827826185489%29.jpg"
+  }
 }
 ]

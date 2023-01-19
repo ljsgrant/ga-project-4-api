@@ -13,7 +13,7 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly
 class BirdListView(APIView):
     # This tuple sets the permission levels of specific views
     # by passing in the rest framework authentication class.
-    permission_classes = (IsAuthenticatedOrReadOnly, )
+    # permission_classes = (IsAuthenticatedOrReadOnly, )
 
     def get(self, _request):
 
@@ -22,7 +22,7 @@ class BirdListView(APIView):
         return Response(serialized_birds.data, status=status.HTTP_200_OK)
 
     def post(self, request):
-        request.data['owner'] = request.user.id
+        # request.data['owner'] = request.user.id
 
         bird_to_add = BirdSerializer(data=request.data)
         try:
@@ -41,3 +41,35 @@ class BirdListView(APIView):
 
         except:
             return Response({"detail": "Unprocessable entity"}, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+
+
+class BirdDetailView(APIView):
+    # permission_classes = (IsAuthenticatedOrReadOnly, )
+
+    def get_bird(self, pk):
+        try:
+            return Bird.objects.get(pk=pk)
+        except Bird.DoesNotExist:
+            raise NotFound(detail=f"Can't find bird with key {pk}")
+
+    def get(self, _request, pk):
+        bird = self.get_bird(pk=pk)
+        serialized_bird = PopulatedBirdSerializer(bird)
+        return Response(serialized_bird.data, status=status.HTTP_200_OK)
+
+    def put(self, request, pk):
+        bird_to_edit = self.get_bird(pk=pk)
+        updated_bird = BirdSerializer(bird_to_edit, data=request.data)
+        try:
+            updated_bird.is_valid()
+            updated_bird.save()
+            return Response(updated_bird.data, status=status.HTTP_202_ACCEPTED)
+        except AssertionError as e:
+            return Response({"detail": str(e)}, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+        except:
+            return Response({"detail": "Unprocessable Entity"}, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+
+    def delete(self, request, pk):
+        bird_to_delete = self.get_bird(pk=pk)
+        bird_to_delete.delete()
+        return Response({"detail": f"Deleted bird with key {pk}"}, status=status.HTTP_204_NO_CONTENT)
