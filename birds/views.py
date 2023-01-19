@@ -73,3 +73,12 @@ class BirdDetailView(APIView):
         bird_to_delete = self.get_bird(pk=pk)
         bird_to_delete.delete()
         return Response({"detail": f"Deleted bird with key {pk}"}, status=status.HTTP_204_NO_CONTENT)
+
+
+class BirdSearchView(APIView):
+    def get(self, request):
+        search_query = request.GET.get('search')
+        print(f"searching birds for query: '{search_query}'")
+        search_results = Bird.objects.filter(name__icontains=search_query)
+        serialized_search_results = BirdSerializer(search_results, many=True)
+        return Response(serialized_search_results.data)
