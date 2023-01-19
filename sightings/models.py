@@ -12,4 +12,4 @@ class Sighting(models.Model):
     posted_on_timestamp = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.owner}"
+        return f"{self.owner} - {self.bird_sighted} - {self.sighted_at_datetime}"

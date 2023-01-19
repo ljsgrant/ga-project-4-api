@@ -3,4 +3,3 @@ from .models import Sighting
 
 # Register your models here.
 admin.site.register(Sighting)
-
