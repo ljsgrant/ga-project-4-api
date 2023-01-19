@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import SightingListView
+from .views import SightingListView, SightingDetailView
 
 urlpatterns = [
     path('', SightingListView.as_view()),
-    # path('<int:pk>/', SightingDetailView.as_view())
+    path('<int:pk>/', SightingDetailView.as_view())
 ]
