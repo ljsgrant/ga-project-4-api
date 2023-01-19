@@ -59,7 +59,7 @@ class BirdDetailView(APIView):
 
 
 class BirdDetailAdminView(APIView):
-    permission_classes = (IsAdminUser, )
+    permission_classes = IsAuthenticated and (IsAdminUser, )
 
     def get_bird(self, pk):
         try:

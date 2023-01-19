@@ -1,6 +1,7 @@
 from .common import UserSerializer
 from sightings.serializers.common import SightingSerializer
+from sightings.serializers.populated import UserPopulatedSightingSerializer
 
 
 class PopulatedUserSerializer(UserSerializer):
-    sightings = SightingSerializer(many=True)
+    sightings = UserPopulatedSightingSerializer(many=True)
