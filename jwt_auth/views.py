@@ -6,8 +6,10 @@ from datetime import datetime, timedelta
 from rest_framework.exceptions import PermissionDenied
 from django.conf import settings
 import jwt
+from rest_framework.exceptions import NotFound
 
 from .serializers.common import UserSerializer
+from .serializers.populated import PopulatedUserSerializer
 
 User = get_user_model()
 
@@ -35,9 +37,21 @@ class LoginView(APIView):
         timestamp = datetime.now() + timedelta(hours=10)
 
         token = jwt.encode(
-            {'sub': user_to_login.id,
-             'exp': int(timestamp.strftime('%s'))},
+            {'sub': user_to_login.id, 'exp': int(timestamp.strftime('%s'))},
             settings.SECRET_KEY, algorithm='HS256'
         )
 
         return Response({'token': token, 'message': f"Hi there {user_to_login.username}!"})
+
+
+class UserDetailView(APIView):
+    def get_user(self, pk):
+        try:
+            return User.objects.get(pk=pk)
+        except User.DoesNotExist:
+            raise NotFound(detail=f"Can't find user with key {pk}")
+
+    def get(self, _request, pk):
+        user = self.get_user(pk=pk)
+        serialized_user = PopulatedUserSerializer(user)
+        return Response(serialized_user.data, status=status.HTTP_200_OK)
