@@ -13,7 +13,7 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly
 class BirdListView(APIView):
     # This tuple sets the permission levels of specific views
     # by passing in the rest framework authentication class.
-    # permission_classes = (IsAuthenticatedOrReadOnly, )
+    permission_classes = (IsAuthenticatedOrReadOnly, )
 
     def get(self, _request):
 
@@ -44,7 +44,7 @@ class BirdListView(APIView):
 
 
 class BirdDetailView(APIView):
-    # permission_classes = (IsAuthenticatedOrReadOnly, )
+    permission_classes = (IsAuthenticatedOrReadOnly, )
 
     def get_bird(self, pk):
         try:

@@ -45,6 +45,7 @@ class LoginView(APIView):
 
 
 class UserDetailView(APIView):
+    
     def get_user(self, pk):
         try:
             return User.objects.get(pk=pk)
