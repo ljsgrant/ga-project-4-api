@@ -28,5 +28,25 @@
     "description": "The Canada goose (sometimes called Canadian goose) is a large wild goose with a black head and neck, white cheeks, white under its chin, and a brown body. It is native to the arctic and temperate regions of North America, and it is occasionally found during migration across the Atlantic in northern Europe.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Canada_goose_on_Seedskadee_NWR_%2827826185489%29.jpg/788px-Canada_goose_on_Seedskadee_NWR_%2827826185489%29.jpg"
   }
+},
+{
+  "model": "birds.bird",
+  "pk": 4,
+  "fields": {
+    "name": "European robin",
+    "scientific_name": "Erithacus rubecula",
+    "description": "A small insectivorous passerine that belongs to the chat subfamily of the Old World flycatcher family. It is found across Europe, east to Western Siberia and south to North Africa; it is sedentary in most of its range except the far north. It is about 12.5–14.0 cm (4.9–5.5 in) in length, the male and female are similar in colouration, with an orange breast and face lined with grey, brown upper-parts and a whitish belly.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Erithacus_rubecula_with_cocked_head.jpg/1280px-Erithacus_rubecula_with_cocked_head.jpg"
+  }
+},
+{
+  "model": "birds.bird",
+  "pk": 5,
+  "fields": {
+    "name": "Ruddy turnstone",
+    "scientific_name": "Arenaria interpres",
+    "description": "a fairly small and stocky bird, 22–24 cm (8.7–9.4 in) long with a wingspan of 50–57 cm (20–22 in) and a weight of 85–150 g (3.0–5.3 oz). The dark, wedge-shaped bill is 2–2.5 cm (0.79–0.98 in) long and slightly upturned. The legs are fairly short at 3.5 cm (1.4 in) and are bright orange.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Arenaria_interpres_%28habitus%29.jpg"
+  }
 }
 ]

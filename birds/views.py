@@ -7,7 +7,7 @@ from .serializers.common import BirdSerializer
 from .serializers.populated import PopulatedBirdSerializer
 from rest_framework.exceptions import NotFound
 from django.db import IntegrityError
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly, IsAdminUser
 
 
 class BirdListView(APIView):
@@ -56,6 +56,16 @@ class BirdDetailView(APIView):
         bird = self.get_bird(pk=pk)
         serialized_bird = PopulatedBirdSerializer(bird)
         return Response(serialized_bird.data, status=status.HTTP_200_OK)
+
+
+class BirdDetailAdminView(APIView):
+    permission_classes = (IsAdminUser, )
+
+    def get_bird(self, pk):
+        try:
+            return Bird.objects.get(pk=pk)
+        except Bird.DoesNotExist:
+            raise NotFound(detail=f"Can't find bird with key {pk}")
 
     def put(self, request, pk):
         bird_to_edit = self.get_bird(pk=pk)
