@@ -17,7 +17,7 @@ class BirdListView(APIView):
 
     def get(self, _request):
 
-        birds = Bird.objects.all()
+        birds = Bird.objects.all().order_by('name')
         serialized_birds = BirdSerializer(birds, many=True)
         return Response(serialized_birds.data, status=status.HTTP_200_OK)
 
@@ -59,7 +59,7 @@ class BirdDetailView(APIView):
 
 
 class BirdDetailAdminView(APIView):
-    permission_classes = IsAuthenticated and (IsAdminUser, )
+    permission_classes = (IsAdminUser, )
 
     def get_bird(self, pk):
         try:

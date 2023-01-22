@@ -1,28 +1,28 @@
 [
-{
-  "model": "sightings.sighting",
-  "pk": 1,
-  "fields": {
-    "bird_sighted": 1,
-    "sighted_at_datetime": "2023-01-19T15:18:38Z",
-    "location_lat": 0.0,
-    "location_long": 0.0,
-    "notes": "Saw it by a stream",
-    "owner": 1,
-    "posted_on_timestamp": "2023-01-19T15:18:57.331Z"
+  {
+    "model": "sightings.sighting",
+    "pk": 1,
+    "fields": {
+      "bird_sighted": 1,
+      "sighted_at_datetime": "2023-01-19T15:18:38Z",
+      "location_lat": 50.8281,
+      "location_long": -0.1227,
+      "notes": "Saw it by a stream",
+      "owner": 1,
+      "posted_on_timestamp": "2023-01-19T15:18:57.331Z"
+    }
+  },
+  {
+    "model": "sightings.sighting",
+    "pk": 2,
+    "fields": {
+      "bird_sighted": 1,
+      "sighted_at_datetime": "2023-01-19T15:18:38Z",
+      "location_lat": 50.8608,
+      "location_long": -0.1842,
+      "notes": "Can't believe I finally saw this bird!",
+      "owner": 1,
+      "posted_on_timestamp": "2023-01-19T15:26:50.081Z"
+    }
   }
-},
-{
-  "model": "sightings.sighting",
-  "pk": 2,
-  "fields": {
-    "bird_sighted": 1,
-    "sighted_at_datetime": "2023-01-19T15:18:38Z",
-    "location_lat": 0.11,
-    "location_long": 11.5,
-    "notes": "Can't believe I finally saw this bird!",
-    "owner": 1,
-    "posted_on_timestamp": "2023-01-19T15:26:50.081Z"
-  }
-}
 ]
