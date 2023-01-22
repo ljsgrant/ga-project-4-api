@@ -91,6 +91,6 @@ class BirdSearchView(APIView):
         body_unicode = request.body.decode('utf-8')
         body = json.loads(body_unicode)
         search_query = body['searchTerm']
-        search_results = Bird.objects.filter(name__icontains=search_query)
+        search_results = Bird.objects.filter(name__icontains=search_query).order_by('name')
         serialized_search_results = BirdSerializer(search_results, many=True)
         return Response(serialized_search_results.data)
