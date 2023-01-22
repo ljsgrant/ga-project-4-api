@@ -8,6 +8,7 @@ from .serializers.populated import PopulatedBirdSerializer
 from rest_framework.exceptions import NotFound
 from django.db import IntegrityError
 from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly, IsAdminUser
+import json
 
 
 class BirdListView(APIView):
@@ -86,9 +87,10 @@ class BirdDetailAdminView(APIView):
 
 
 class BirdSearchView(APIView):
-    def get(self, request):
-        search_query = request.GET.get('search')
-        print(f"searching birds for query: '{search_query}'")
+    def post(self, request):
+        body_unicode = request.body.decode('utf-8')
+        body = json.loads(body_unicode)
+        search_query = body['searchTerm']
         search_results = Bird.objects.filter(name__icontains=search_query)
         serialized_search_results = BirdSerializer(search_results, many=True)
         return Response(serialized_search_results.data)
