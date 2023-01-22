@@ -9,5 +9,5 @@ class PopulatedSightingSerializer(SightingSerializer):
     bird_sighted = PopulatedBirdSerializer()
 
 
-class UserPopulatedSightingSerializer(SightingSerializer):
+class BirdPopulatedSightingSerializer(SightingSerializer):
     bird_sighted = BirdSerializer()

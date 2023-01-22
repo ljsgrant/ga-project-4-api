@@ -1,6 +1,6 @@
 from .common import BirdSerializer
-from sightings.serializers.common import SightingSerializer
+from sightings.serializers.userPopulated import UserPopulatedSightingSerializer
 
 
 class PopulatedBirdSerializer(BirdSerializer):
-    sightings = SightingSerializer(many=True)
+    sightings = UserPopulatedSightingSerializer(many=True)
