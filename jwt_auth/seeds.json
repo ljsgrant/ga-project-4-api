@@ -36,5 +36,24 @@
     "groups": [],
     "user_permissions": []
   }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$KuSTRDpDlDali6R6U1SeNh$n3udUfI+UNxTc8U/SuGuvht5qi0Ov56dIxLq9gJvevA=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "louis",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-01-22T16:32:24.425Z",
+    "email": "louis@louis.com",
+    "first_name": "louis",
+    "last_name": "louis",
+    "profile_picture": "",
+    "groups": [],
+    "user_permissions": []
+  }
 }
 ]

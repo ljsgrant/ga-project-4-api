@@ -1,28 +1,198 @@
 [
-  {
-    "model": "sightings.sighting",
-    "pk": 1,
-    "fields": {
-      "bird_sighted": 1,
-      "sighted_at_datetime": "2023-01-19T15:18:38Z",
-      "location_lat": 50.8281,
-      "location_long": -0.1227,
-      "notes": "Saw it by a stream",
-      "owner": 1,
-      "posted_on_timestamp": "2023-01-19T15:18:57.331Z"
-    }
-  },
-  {
-    "model": "sightings.sighting",
-    "pk": 2,
-    "fields": {
-      "bird_sighted": 1,
-      "sighted_at_datetime": "2023-01-19T15:18:38Z",
-      "location_lat": 50.8608,
-      "location_long": -0.1842,
-      "notes": "Can't believe I finally saw this bird!",
-      "owner": 1,
-      "posted_on_timestamp": "2023-01-19T15:26:50.081Z"
-    }
+{
+  "model": "sightings.sighting",
+  "pk": 1,
+  "fields": {
+    "bird_sighted": 1,
+    "sighted_at_datetime": "2023-01-19T15:18:38Z",
+    "location_lat": 50.8281,
+    "location_long": -0.1227,
+    "notes": "Saw it by a stream",
+    "owner": 1,
+    "image": "0",
+    "posted_on_timestamp": "2023-01-19T15:18:57.331Z"
   }
+},
+{
+  "model": "sightings.sighting",
+  "pk": 2,
+  "fields": {
+    "bird_sighted": 1,
+    "sighted_at_datetime": "2023-01-19T15:18:38Z",
+    "location_lat": 50.8608,
+    "location_long": -0.1842,
+    "notes": "Can't believe I finally saw this bird!",
+    "owner": 1,
+    "image": "0",
+    "posted_on_timestamp": "2023-01-19T15:26:50.081Z"
+  }
+},
+{
+  "model": "sightings.sighting",
+  "pk": 3,
+  "fields": {
+    "bird_sighted": 3,
+    "sighted_at_datetime": "2023-01-22T10:20:00Z",
+    "location_lat": 51.09355067804634,
+    "location_long": -0.01467345983718893,
+    "notes": "Whole flock of these landed on the reservoir while I was eating my sandwich - made so much noise I nearly dropped my flask of tea",
+    "owner": 1,
+    "image": "0",
+    "posted_on_timestamp": "2023-01-22T10:20:35.778Z"
+  }
+},
+{
+  "model": "sightings.sighting",
+  "pk": 4,
+  "fields": {
+    "bird_sighted": 3,
+    "sighted_at_datetime": "2023-01-22T12:14:00Z",
+    "location_lat": 51.53606314086357,
+    "location_long": -0.3515625,
+    "notes": "Saw a goose on the loose",
+    "owner": 1,
+    "image": "0",
+    "posted_on_timestamp": "2023-01-22T15:18:49.122Z"
+  }
+},
+{
+  "model": "sightings.sighting",
+  "pk": 5,
+  "fields": {
+    "bird_sighted": 4,
+    "sighted_at_datetime": "2023-01-22T15:34:00Z",
+    "location_lat": 51.48138968422654,
+    "location_long": -1.2301253853529448,
+    "notes": "On a tree in the garden",
+    "owner": 1,
+    "image": "0",
+    "posted_on_timestamp": "2023-01-22T15:34:26.213Z"
+  }
+},
+{
+  "model": "sightings.sighting",
+  "pk": 6,
+  "fields": {
+    "bird_sighted": 3,
+    "sighted_at_datetime": "2023-01-14T15:37:00Z",
+    "location_lat": 50.68084203834469,
+    "location_long": -1.273710164973554,
+    "notes": "Seen in a field",
+    "owner": 1,
+    "image": "0",
+    "posted_on_timestamp": "2023-01-22T15:37:57.003Z"
+  }
+},
+{
+  "model": "sightings.sighting",
+  "pk": 7,
+  "fields": {
+    "bird_sighted": 3,
+    "sighted_at_datetime": "2021-04-27T12:56:00Z",
+    "location_lat": 0.0,
+    "location_long": 0.0,
+    "notes": "Seen in the garden",
+    "owner": 1,
+    "image": "0",
+    "posted_on_timestamp": "2023-01-23T12:12:44.324Z"
+  }
+},
+{
+  "model": "sightings.sighting",
+  "pk": 8,
+  "fields": {
+    "bird_sighted": 6,
+    "sighted_at_datetime": "2021-04-27T12:56:00Z",
+    "location_lat": 50.86274765657456,
+    "location_long": -0.20769564629040896,
+    "notes": "Seen in the garden",
+    "owner": 1,
+    "image": "0",
+    "posted_on_timestamp": "2023-01-23T12:16:44.699Z"
+  }
+},
+{
+  "model": "sightings.sighting",
+  "pk": 9,
+  "fields": {
+    "bird_sighted": 6,
+    "sighted_at_datetime": "2023-01-22T18:44:00Z",
+    "location_lat": 50.73644674030557,
+    "location_long": -3.0315913379029573,
+    "notes": "Seen in garden",
+    "owner": 1,
+    "image": "0",
+    "posted_on_timestamp": "2023-01-23T12:45:12.390Z"
+  }
+},
+{
+  "model": "sightings.sighting",
+  "pk": 10,
+  "fields": {
+    "bird_sighted": 6,
+    "sighted_at_datetime": "2023-01-04T15:50:00Z",
+    "location_lat": 51.56341645246395,
+    "location_long": -3.55831703153827,
+    "notes": "Seen in wales",
+    "owner": 1,
+    "image": "0",
+    "posted_on_timestamp": "2023-01-23T12:47:33.805Z"
+  }
+},
+{
+  "model": "sightings.sighting",
+  "pk": 11,
+  "fields": {
+    "bird_sighted": 6,
+    "sighted_at_datetime": "2023-01-21T12:49:00Z",
+    "location_lat": 52.749774416595386,
+    "location_long": -0.878700231211771,
+    "notes": "Magpie in a field",
+    "owner": 1,
+    "image": "0",
+    "posted_on_timestamp": "2023-01-23T12:50:08.207Z"
+  }
+},
+{
+  "model": "sightings.sighting",
+  "pk": 12,
+  "fields": {
+    "bird_sighted": 6,
+    "sighted_at_datetime": "2021-04-27T12:56:00Z",
+    "location_lat": 50.88917901817186,
+    "location_long": -0.3322865306059786,
+    "notes": "Seen in the garden",
+    "owner": 1,
+    "image": "pihttd9ud7ki98r2exnl",
+    "posted_on_timestamp": "2023-01-23T12:55:35.649Z"
+  }
+},
+{
+  "model": "sightings.sighting",
+  "pk": 13,
+  "fields": {
+    "bird_sighted": 6,
+    "sighted_at_datetime": "2023-01-23T14:54:00Z",
+    "location_lat": 53.82693346420533,
+    "location_long": -8.961478776458913,
+    "notes": "In a bush",
+    "owner": 1,
+    "image": "u6tcyfpk2ryei5mbhf0q",
+    "posted_on_timestamp": "2023-01-23T14:59:03.758Z"
+  }
+},
+{
+  "model": "sightings.sighting",
+  "pk": 14,
+  "fields": {
+    "bird_sighted": 7,
+    "sighted_at_datetime": "2016-01-12T13:09:00Z",
+    "location_lat": 50.86850106727099,
+    "location_long": -0.15376567316911063,
+    "notes": "Common crow on the street searching for scraps",
+    "owner": 1,
+    "image": "nf35jaqaedgxqna8rkum",
+    "posted_on_timestamp": "2023-01-23T22:47:13.946Z"
+  }
+}
 ]
