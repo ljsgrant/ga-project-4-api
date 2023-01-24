@@ -11,7 +11,7 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 
 class SightingListView(APIView):
-    # permission_classes = (IsAuthenticatedOrReadOnly, )
+    permission_classes = (IsAuthenticatedOrReadOnly, )
 
     def get(self, _request):
 
@@ -42,7 +42,7 @@ class SightingListView(APIView):
 
 
 class SightingDetailView(APIView):
-    # permission_classes = (IsAuthenticatedOrReadOnly, )
+    permission_classes = (IsAuthenticatedOrReadOnly, )
 
     def get_sighting(self, pk):
         try:
@@ -56,7 +56,12 @@ class SightingDetailView(APIView):
         return Response(serialized_sighting.data, status=status.HTTP_200_OK)
 
     def put(self, request, pk):
+        request.data['owner'] = request.user.id
         sighting_to_edit = self.get_sighting(pk=pk)
+        print(request.user.id)
+        print(sighting_to_edit.owner.id)
+        if request.user.id != sighting_to_edit.owner.id:
+            return Response({"detail": "Unauthorized, you need to be the sighting owner to do that"}, status=status.HTTP_401_UNAUTHORIZED)
         updated_sighting = SightingSerializer(
             sighting_to_edit, data=request.data)
         try:
