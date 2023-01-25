@@ -105,6 +105,7 @@ class BirdFilteredSightingsView(APIView):
         serialized_bird = PopulatedBirdSerializer(bird)
         filtered_sightings = serialized_bird.data['sightings']
 
+        # filter by user's sightings
         if body['byMySightings']:
             def check_if_owner(list_item):
                 if list_item['owner']['id'] == request.user.id:
@@ -116,6 +117,7 @@ class BirdFilteredSightingsView(APIView):
             sightings_iterator = filter(check_if_owner, filtered_sightings)
             filtered_sightings = list(sightings_iterator)
 
+        # filter by dates
         if body['dateFrom'] and body['dateTo']:
             formatted_date_from = body['dateFrom'][0:10].replace("-", "")
             formatted_date_to = body['dateTo'][0:10].replace("-", "")
@@ -132,6 +134,39 @@ class BirdFilteredSightingsView(APIView):
             sightings_iterator = filter(
                 check_if_in_date_range, filtered_sightings)
             filtered_sightings = list(sightings_iterator)
+
+        # filter by times
+        if body['timeFrom'] and body['timeTo']:
+            formatted_time_from = body['timeFrom'].replace(":", "")
+            formatted_time_to = body['timeTo'].replace(":", "")
+
+            def check_if_in_time_range_incl_midnight(list_item):
+                formatted_list_item = list_item['sighted_at_datetime'][11:16].replace(
+                    ":", "")
+                if formatted_list_item > formatted_time_from or formatted_list_item < formatted_time_to:
+                    print('true')
+                    return True
+                else:
+                    print('false')
+                    return False
+
+            def check_if_in_time_range_excl_midnight(list_item):
+                formatted_list_item = list_item['sighted_at_datetime'][11:16].replace(
+                    ":", "")
+                if formatted_list_item > formatted_time_from and formatted_list_item < formatted_time_to:
+                    print('true')
+                    return True
+                else:
+                    print('false')
+                    return False
+            if formatted_time_to < formatted_time_from:
+                sightings_iterator = filter(
+                    check_if_in_time_range_incl_midnight, filtered_sightings)
+                filtered_sightings = list(sightings_iterator)
+            if formatted_time_to > formatted_time_from:
+                sightings_iterator = filter(
+                    check_if_in_time_range_excl_midnight, filtered_sightings)
+                filtered_sightings = list(sightings_iterator)
 
         bird_data = serialized_bird.data
         bird_data['sightings'] = filtered_sightings
