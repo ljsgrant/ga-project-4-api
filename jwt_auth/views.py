@@ -37,7 +37,8 @@ class LoginView(APIView):
         timestamp = datetime.now() + timedelta(hours=10)
 
         token = jwt.encode(
-            {'sub': user_to_login.id, 'exp': int(timestamp.strftime('%s'))},
+            {'sub': user_to_login.id, 'exp': int(
+                timestamp.strftime('%s')), 'isAdmin': user_to_login.is_staff},
             settings.SECRET_KEY, algorithm='HS256'
         )
 
@@ -45,7 +46,7 @@ class LoginView(APIView):
 
 
 class UserDetailView(APIView):
-    
+
     def get_user(self, pk):
         try:
             return User.objects.get(pk=pk)
