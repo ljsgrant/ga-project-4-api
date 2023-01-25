@@ -91,6 +91,32 @@ class BirdSearchView(APIView):
         body_unicode = request.body.decode('utf-8')
         body = json.loads(body_unicode)
         search_query = body['searchTerm']
-        search_results = Bird.objects.filter(name__icontains=search_query).order_by('name')
+        search_results = Bird.objects.filter(
+            name__icontains=search_query).order_by('name')
         serialized_search_results = BirdSerializer(search_results, many=True)
-        return Response(serialized_search_results.data)
+        return Response(serialized_search_results.data, status=status.HTTP_200_OK)
+
+
+class BirdFilteredSightingsView(APIView):
+    def post(self, request):
+        body_unicode = request.body.decode('utf-8')
+        body = json.loads(body_unicode)
+        bird = Bird.objects.get(pk=body['forBirdId'])
+        serialized_bird = PopulatedBirdSerializer(bird)
+        filtered_sightings = serialized_bird.data['sightings']
+
+        if body['byMySightings']:
+            def check_if_owner(list_item):
+                if list_item['owner']['id'] == request.user.id:
+                    print('true')
+                    return True
+                else:
+                    print('false')
+                    return False
+            sightings_iterator = filter(check_if_owner, filtered_sightings)
+            filtered_sightings = list(sightings_iterator)
+
+        bird_data = serialized_bird.data
+        bird_data['sightings'] = filtered_sightings
+
+        return Response(bird_data, status=status.HTTP_200_OK)

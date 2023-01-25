@@ -5,9 +5,12 @@ from rest_framework import status
 from .models import Sighting
 from .serializers.common import SightingSerializer
 from .serializers.populated import PopulatedSightingSerializer
+from .serializers.userPopulated import UserPopulatedSightingSerializer
 from rest_framework.exceptions import NotFound
 from django.db import IntegrityError
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
+
+import json
 
 
 class SightingListView(APIView):
@@ -75,3 +78,16 @@ class SightingDetailView(APIView):
         sighting_to_delete = self.get_sighting(pk=pk)
         sighting_to_delete.delete()
         return Response({"detail": f"Deleted sighting with key {pk}"}, status=status.HTTP_204_NO_CONTENT)
+
+
+# class SightingSearchView(APIView):
+#     def post(self, request):
+#         body_unicode = request.body.decode('utf-8')
+#         body = json.loads(body_unicode)
+#         sightings = Sighting.objects.get(bird_sighted=body['forBirdId'])
+
+#         if body['mySightings']:
+#             sightings = sightings.filter(owner=request.user.id)
+#         serialized_search_results = UserPopulatedSightingSerializer(
+#             sightings, many=True)
+#         return Response(serialized_search_results.data)
