@@ -116,6 +116,23 @@ class BirdFilteredSightingsView(APIView):
             sightings_iterator = filter(check_if_owner, filtered_sightings)
             filtered_sightings = list(sightings_iterator)
 
+        if body['dateFrom'] and body['dateTo']:
+            formatted_date_from = body['dateFrom'][0:10].replace("-", "")
+            formatted_date_to = body['dateTo'][0:10].replace("-", "")
+
+            def check_if_in_date_range(list_item):
+                formatted_list_item = list_item['sighted_at_datetime'][0:10].replace(
+                    "-", "")
+                if formatted_list_item > formatted_date_from and formatted_list_item < formatted_date_to:
+                    print('true')
+                    return True
+                else:
+                    print('false')
+                    return False
+            sightings_iterator = filter(
+                check_if_in_date_range, filtered_sightings)
+            filtered_sightings = list(sightings_iterator)
+
         bird_data = serialized_bird.data
         bird_data['sightings'] = filtered_sightings
 
