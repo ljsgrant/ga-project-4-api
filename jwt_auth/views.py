@@ -38,7 +38,7 @@ class LoginView(APIView):
 
         token = jwt.encode(
             {'sub': user_to_login.id, 'exp': int(
-                timestamp.strftime('%s')), 'isAdmin': user_to_login.is_staff},
+                timestamp.strftime('%s')), 'isAdmin': user_to_login.is_staff, 'username': user_to_login.username},
             settings.SECRET_KEY, algorithm='HS256'
         )
 
