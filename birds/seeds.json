@@ -1,0 +1,112 @@
+[
+{
+  "model": "birds.bird",
+  "pk": 1,
+  "fields": {
+    "name": "Common Kingfisher",
+    "scientific_name": "Alcedo atthis",
+    "description": "The common kingfisher (Alcedo atthis), also known as the Eurasian kingfisher and river kingfisher, is a small kingfisher with seven subspecies recognized within its wide distribution across Eurasia and North Africa. It is resident in much of its range, but migrates from areas where rivers freeze in winter.  This sparrow-sized bird has the typical short-tailed, large-headed kingfisher profile; it has blue upperparts, orange underparts and a long bill.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/92/%E2%99%82_Common_Kingfisher_%28Alcedo_atthis%29_Photograph_By_Shantanu_Kuveskar%2C_Mangaon%2C_Maharashtra%2C_India.jpg"
+  }
+},
+{
+  "model": "birds.bird",
+  "pk": 2,
+  "fields": {
+    "name": "Little grebe",
+    "scientific_name": "Tachybaptus ruficollis",
+    "description": "The little grebe (Tachybaptus ruficollis), also known as dabchick, is a member of the grebe family of water birds. The genus name is from Ancient Greek takhus \"fast\" and bapto \"to sink under\".",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Little_grebe_Zwergtaucher.jpg"
+  }
+},
+{
+  "model": "birds.bird",
+  "pk": 3,
+  "fields": {
+    "name": "Canada goose",
+    "scientific_name": "Branta canadensis",
+    "description": "The Canada goose (sometimes called Canadian goose) is a large wild goose with a black head and neck, white cheeks, white under its chin, and a brown body. It is native to the arctic and temperate regions of North America, and it is occasionally found during migration across the Atlantic in northern Europe.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Canada_goose_on_Seedskadee_NWR_%2827826185489%29.jpg/788px-Canada_goose_on_Seedskadee_NWR_%2827826185489%29.jpg"
+  }
+},
+{
+  "model": "birds.bird",
+  "pk": 4,
+  "fields": {
+    "name": "European robin",
+    "scientific_name": "Erithacus rubecula",
+    "description": "A small insectivorous passerine that belongs to the chat subfamily of the Old World flycatcher family. It is found across Europe, east to Western Siberia and south to North Africa; it is sedentary in most of its range except the far north. It is about 12.5–14.0 cm (4.9–5.5 in) in length, the male and female are similar in colouration, with an orange breast and face lined with grey, brown upper-parts and a whitish belly.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Erithacus_rubecula_with_cocked_head.jpg/1280px-Erithacus_rubecula_with_cocked_head.jpg"
+  }
+},
+{
+  "model": "birds.bird",
+  "pk": 5,
+  "fields": {
+    "name": "Ruddy turnstone",
+    "scientific_name": "Arenaria interpres",
+    "description": "a fairly small and stocky bird, 22–24 cm (8.7–9.4 in) long with a wingspan of 50–57 cm (20–22 in) and a weight of 85–150 g (3.0–5.3 oz). The dark, wedge-shaped bill is 2–2.5 cm (0.79–0.98 in) long and slightly upturned. The legs are fairly short at 3.5 cm (1.4 in) and are bright orange.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Arenaria_interpres_%28habitus%29.jpg"
+  }
+},
+{
+  "model": "birds.bird",
+  "pk": 6,
+  "fields": {
+    "name": "Eurasian Magpie",
+    "scientific_name": "Pica pica",
+    "description": "A resident breeding bird throughout the northern part of the Eurasian continent. It is one of several birds in the crow family (corvids) designated magpies, and belongs to the Holarctic radiation of \"monochrome\" magpies. One of the most intelligent birds, it is believed to be one of the most intelligent of all non-human animals, and is the only bird known to pass the mirror test, along with very few other non-avian species.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Pica_pica_-_Compans_Caffarelli_-_2012-03-16.jpg"
+  }
+},
+{
+  "model": "birds.bird",
+  "pk": 7,
+  "fields": {
+    "name": "Carrion crow",
+    "scientific_name": "Corvus corone",
+    "description": "Native to western Europe and the eastern Palearctic, the plumage of the carrion crow is black with a green or purple sheen. The bill, legs and feet are also black. It can be distinguished from the common raven by its size of around 48–52 centimetres (19–20 in) in length as compared to an average of 63 centimetres (25 inches) for ravens, and from the hooded crow by its black plumage. The carrion crow has a wingspan of 84–100 centimetres (33–39 in) and weighs 400–600 grams",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Corvus_corone_-near_Canford_Cliffs%2C_Poole%2C_England-8.jpg"
+  }
+},
+{
+  "model": "birds.bird",
+  "pk": 8,
+  "fields": {
+    "name": "Red Kite",
+    "scientific_name": "Milvus milvus",
+    "description": "A medium-large bird of prey in the family Accipitridae. The species currently breeds in the Western Palearctic region of Europe and northwest Africa. It is resident in the milder parts of its range in western Europe and northwest Africa, but birds from northeastern and Central Europe winter further south and west, reaching south to Turkey. Red kites are 60 to 70 cm (24 to 28 in) long with a 175–179 cm (69–70 in) wingspan; males weigh 800–1,200 g (28–42 oz), and females 1,000–1,300 g (35–46 oz).",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Milvus_milvus_R%28ThKraft%29.jpg"
+  }
+},
+{
+  "model": "birds.bird",
+  "pk": 9,
+  "fields": {
+    "name": "Common Kestrel",
+    "scientific_name": "Falco tinnunculus",
+    "description": "A bird of prey species belonging to the kestrel group of the falcon family Falconidae. Their plumage is mainly light chestnut brown with blackish spots on the upperside and buff with narrow blackish streaks on the underside; the remiges are also blackish. Unlike most raptors, they display sexual colour dimorphism with the male having fewer black spots and streaks, as well as a blue-grey cap and tail. They measure 32–39 cm from head to tail, with a wingspan of 65–82 cm.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/24/Common_kestrel_falco_tinnunculus.jpg"
+  }
+},
+{
+  "model": "birds.bird",
+  "pk": 10,
+  "fields": {
+    "name": "Eurasian blue tit",
+    "scientific_name": "Cyanistes caeruleus",
+    "description": "A small passerine bird in the tit family, Paridae. It is easily recognisable by its blue and yellow plumage and small size. Usually resident and non-migratory birds, they are widespread and a common resident breeder throughout temperate and subarctic Europe and the western Palearctic in deciduous or mixed woodlands with a high proportion of oak. They usually nest in tree holes, although they easily adapt to nest boxes where necessary.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/8/86/Eurasian_blue_tit_Lancashire.jpg"
+  }
+},
+{
+  "model": "birds.bird",
+  "pk": 11,
+  "fields": {
+    "name": "Coal tit",
+    "scientific_name": "Periparus ater",
+    "description": "A small passerine bird. A widespread and common resident breeder in forests throughout the temperate to subtropical Palearctic, including North Africa. 10–11.5 cm in length, it has a distinctive large white nape spot on its black head. The head, throat and neck of the adult are glossy blue-black, with off-white sides to the face and a brilliant white nape; white tips of the wing coverts appear as two wingbars. The underparts are whitish through buff to rufous on the flanks.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/92/Coal_tit_UK09.JPG"
+  }
+}
+]
