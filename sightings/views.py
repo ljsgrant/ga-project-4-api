@@ -76,6 +76,8 @@ class SightingDetailView(APIView):
 
     def delete(self, request, pk):
         sighting_to_delete = self.get_sighting(pk=pk)
+        if request.user.id != sighting_to_delete.owner.id and not request.user.is_staff:
+            return Response({"detail": "Unauthorized, you need to be the sighting owner to do that"}, status=status.HTTP_401_UNAUTHORIZED)
         sighting_to_delete.delete()
         return Response({"detail": f"Deleted sighting with key {pk}"}, status=status.HTTP_204_NO_CONTENT)
 
