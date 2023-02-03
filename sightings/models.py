@@ -10,7 +10,7 @@ class Sighting(models.Model):
     notes = models.CharField(max_length=500)
     owner = models.ForeignKey(
         "jwt_auth.User", related_name="sightings", on_delete=models.CASCADE)
-    image = models.CharField(max_length=40)
+    image = models.CharField(max_length=40, blank=True)
     posted_on_timestamp = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
